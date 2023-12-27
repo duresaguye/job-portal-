@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="smart jobs" content="smart jobs Contact Information">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+        <link rel="stylesheet" href="asset/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+<body>
+    <header class="sticky top-0 z-50 bg-gray-400 shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img  src="asset/images/logo.png" alt="Logo of smart job"
+                class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16">
+                <div class="lg:hidden">
+                    <div class="menu-toggle text-gray-800" id="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <nav class="hidden lg:flex space-x-10 text-white">
+                <a class="hover:text-blue-500" href="index.html">Home</a>
+                <a class="hover:text-blue-500" href="jobs.html">Jobs</a>
+                <a class="hover:text-blue-500" href="postJobs.html">Post Jobs</a>
+                <a class="hover:text-blue-500" href="savedJobs.html">Saved Jobs</a>
+                <a class="hover:text-blue-500" href="about.html">About Us</a>
+                <a class="hover:text-blue-500" href="contact.html">Contact Us</a>
+                <a class="hover:text-blue-500" href="sign.html">Sign in/up</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto flex flex-col items-center justify-center">
+        <section class="text-2xl text-gray-800 pb-4">
+            <h1>Contact us</h1>
+        </section>
+
+        <section>
+            <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg">
+                <!-- Contact Information -->
+                <div class="space-y-4">
+                    <p class="block text-lg font-medium text-gray-700">Address: Addis Ababa, Ethiopia</p>
+                    <p class="block text-lg font-medium text-gray-700 hover:text-blue-300">
+                        Phone: <a href="tel:+1234567890">+251994445412</a>
+                    </p>
+                    <p class="block text-lg font-medium text-gray-700 hover:text-blue-300">
+                        Email: <a href="mailto:info@example.com">dureguye2@gmail.com</a>
+                    </p>
+                </div>
+
+                
+                <form action="your_actual_submit_url" method="post" class="space-y-4 mt-8">
+                    <h1 class="text-3xl font-bold">Write your feedback here</h1>
+
+                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name:</label>
+                    <input type="text" name="first-name" id="first-name" required
+                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+
+                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name:</label>
+                    <input type="text" name="last-name" id="last-name" required
+                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+                    
+                           <label for="Personal-email" class="block text-sm font-medium text-gray-700">Personal Email:</label>
+                           <input type="email" name="Personal-email" id="Personal-email" 
+                                  class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+
+                    <label for="company-name" class="block text-sm font-medium text-gray-700">Company Name:</label>
+                    <input type="text" name="company-name" id="company-name"
+                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+
+                    <label for="company-email" class="block text-sm font-medium text-gray-700">Company Email:</label>
+                    <input type="email" name="company-email" id="company-email"
+                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+
+                    <label for="country" class="block text-sm font-medium text-gray-700">Country:</label>
+                    <input type="text" name="country" id="country"
+                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+
+                    <label for="comment" class="block text-sm font-medium text-gray-700">Comment:</label>
+                    <textarea name="comment" id="comment"
+                              class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"></textarea>
+
+                    <button type="submit"
+                            class="bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-200 p-8 mt-8">
+        
+        <img width="120px" src="asset/images/logo.png" alt="Logo of Smart Jobs" class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16">
+
+       
+        <div class="contact-info text-center mb-4">
+            <ul class="list-none">
+                <li>Phone: <a href="tel:+1234567890" class="hover:text-blue-500">+251994445412</a></li>
+                <li>Email: <a href="mailto:info@example.com" class="hover:text-blue-500">dureguye2@gmail.com</a></li>
+                <li>Address: Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
+        <div class="socials flex">
+            <a href="https://t.me/Icon_dura" class="mr-4"><img width="40px" src="asset/images/telegram.png" alt="telegram icon"></a>
+            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="mr-4"><img width="40px" src="asset/images/linkedin.png" alt="linkedin icon"></a>
+            <a href="https://github.com/duresaguye"><img width="40px" src="asset/images/github.png" alt="github icon"></a>
+        </div>
+        <div class="copyright text-center py-6">
+            &copy; 2023 Smart Jobs. All rights reserved.
+        </div>
+    </footer>  
+</body>
+
+</html>
