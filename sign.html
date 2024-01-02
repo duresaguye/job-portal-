@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     </head>
 <body>
-    <header class="sticky top-0 z-50 bg-gray-400 shadow-md p-4">
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
                 <img  src="asset/images/logo.png" alt="Logo of smart job"
@@ -35,14 +35,18 @@
     </header>
     <main>
         <form action="">
-          <label for="fname">First name</label>
-          <input type="text">
-          <label for="Lname">Last Name</label>
-          <input type="text" name="lname" id="lname">
-          <label for="password">password</label>
-          <input type="password" name="password" id="password">
-          <label for="confirom">confirom password</label>
-          <input type="password" name="password" id="password">
+            <fieldset>
+                <legend>Sign up</legend>
+                <label for="fname"class="block text-sm font-medium text-gray-700">First name</label>
+                <input type="text">
+                <label for="Lname"class="block text-sm font-medium text-gray-700">Last Name</label>
+                <input type="text" name="lname" id="lname">
+                <label for="password"class="block text-sm font-medium text-gray-700">password</label>
+                <input type="password" name="password" id="password">
+                <label for="confirom"class="block text-sm font-medium text-gray-700">confirom password</label>
+                <input type="password" name="password" id="password">
+            </fieldset>
+
         </form>
     </main>
     <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-200 p-8 mt-8">
