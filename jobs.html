@@ -33,6 +33,21 @@
             </nav>
         </div>
     </header>
+    <main class="container">
+        <section>
+            <div class="text-center p-8">
+                <label for="title">Title:</label>
+                <input type="search" id="title" name="title" placeholder="Search for a specific job..." />
+                <button type="button" onclick="searchjob()"
+                class="bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+            search 
+        </button> 
+            </div>
+            <div id="joblist">
+
+            </div>
+        </section>
+    </main>
     
     <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-200 p-8 mt-8">
         
@@ -55,6 +70,7 @@
             &copy; 2023 Smart Jobs. All rights reserved.
         </div>
     </footer> 
+    <script src="asset/script.js"></script>
 </body>
 
 </html>
