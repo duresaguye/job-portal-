@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="asset/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     </head>
-<body class="font-sans">
+<body class="font-sans bg-gray-300">
     <header class="sticky top-0 z-50 bg-gray-900 shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
@@ -35,25 +35,25 @@
     </header>
     <main class="container mx-auto flex flex-col items-center justify-center">
         <section >
-            <div class="container mx-auto  p-8 bg-white shadow-lg rounded-lg">
-                <h2 class="text-2xl text-gray-800 pb-4 text-center">post job</h2>
+            <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg">
+                <h1 class="text-3xl text-gray-800 pb-4 text-center">Post job</h1>
                 <form action="#" method="POST" class="space-y-4 mt-8">
-                    <label for="company-name" class="block text-sm font-medium text-gray-700">company name:</label>
-                        <input type="text" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" required>
-                    <label for="Job title"class="block text-sm font-medium text-gray-700">Job Title</label>
-                    <input type="text" id="Job_title" name="Job_title" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"required>
-                    <label for="JOb description"class="block text-sm font-medium text-gray-700">Job Description</label>
-                    <textarea name="job description" id="job description" cols="3" rows="2" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"></textarea>
-                    <label for="job type"class="block text-sm font-medium text-gray-700">Job type(Optional)</label>
-                    <input type="text"class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
-                    <label for="loction"class="block text-sm font-medium text-gray-700">Loction</label>
-                    <input type="text"class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
-                    <label for="datee"class="block text-sm font-medium text-gray-700">End Date</label>
-                    <input type="date"class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+                    <label for="company name" class="block text-sm font-medium text-gray-700">company name:</label>
+                    <input type="text" id="company name" name="company name" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" required autocomplete="given-name">
+                    <label for="Job Title"class="block text-sm font-medium text-gray-700">Job Title</label>
+                 <input type="text" id="Job Title" name="Job Title" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"required autocomplete="given-name">
+                    <label for="Job Description"class="block text-sm font-medium text-gray-700">Job Description</label>
+                    <textarea name="Job Description" id="Job Description" cols="3" rows="2" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"></textarea>
+                    <label for="Job type"class="block text-sm font-medium text-gray-700">Job type</label>
+                    <input type="text" id="Job type" name="Job type" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" autocomplete="given-name">
+                    <label for="Loction"class="block text-sm font-medium text-gray-700">Loction</label>
+                    <input type="text" id="Loction" name="Loction" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+                    <label for="End Date"class="block text-sm font-medium text-gray-700">End Date</label>
+                    <input type="date" id="End Date" name="End Date" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
                     <label for="email"class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email"class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+                    <input type="email" id="email" name="email"class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" required autocomplete="off">
                     <button type="submit"
-                    class="bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                    class="bg-blue-500 text-gray-700  py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
                 Submit
             </button>
             </form>
