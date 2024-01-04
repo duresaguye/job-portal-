@@ -4,6 +4,9 @@ const joblist = [
     { title: "UX Designer", company: "DesignHub", location: "Adama", description: "Shape the user experience with innovative design." },
     {
         title:"Software Engineer", company:"Tech Innovators Inc",location: "Addis Ababa", description:" Tech Innovators Inc. is seeking a talented Software Engineer to join our dynamic team.In this role,<br> you will be responsible for designing, developing, and maintaining cutting-edge  software solutions. Collaborate <br> with cross-functional teams, analyze user requirements, and participate in code and design reviews. <br>If you're passionate about technology and love solving complex problems, we want to hear from you!"
+    },
+    {
+        title: "Journalist", company: "Techኢት:",location: "Addis Ababa", description:" We are seeking a passionate and skilled Journalist to join our dynamic news team. As a Journalist,<br> you will play a key role in researching, writing, and reporting on news stories for our audience.<br> You will have a keen eye for detail, excellent communication skills, and a commitment to delivering accurate and timely news coverage"
     }
     
 ];
@@ -22,7 +25,7 @@ function displayjoblist(list) {
             <p class="mb-1"><strong>Location:</strong> ${job.location}</p>
             <p class="mb-2"><strong>Description:</strong>${job.description}</p>
             <a href="apply.html"
-            class="inline-block bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+            class="inline-block bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 mb-2">
              Apply Now
          </a>
         </div>
@@ -46,5 +49,16 @@ function toggleForm(activeForm) {
       signInForm.classList.remove('hidden');
     }
   }
+  document.addEventListener('DOMContentLoaded', function () {
+    var mobileMenu = document.getElementById('mobile-menu');
+    var nav = document.querySelector('nav');
+
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function () {
+           
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+    }
+});
 
 
