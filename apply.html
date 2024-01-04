@@ -2,36 +2,37 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="smart jobs" content="smart jobs Contact Information">
+        <meta name="smart jobs" content="smart jobs home page">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Apply</title>
+        <title>Home</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
         <link rel="stylesheet" href="asset/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     </head>
-<body>    <header class="sticky top-0 z-50 bg-gray-900 shadow-md p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <img  src="asset/images/logo.png" alt="Logo of smart job"
-                class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16">
-                <div class="lg:hidden">
-                    <div class="menu-toggle text-gray-800" id="mobile-menu">
-                        <i class="fas fa-bars"></i>
+    <body class="font-roboto">
+        <header class="sticky top-0 z-50 bg-white shadow-md p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <img  src="asset/images/smartjoblogo.png" alt="Logo of smart job"
+                    class="mr-4 rounded-full h-20 lg:h-16 w-16 lg:w-16">
+                    <div class="lg:hidden">
+                        <div class="menu-toggle text-gray-800" id="mobile-menu">
+                            <i class="fas fa-bars"></i>
+                        </div>
                     </div>
                 </div>
+                <nav class="hidden lg:flex space-x-12 text-gray-800 h-8 ">
+                    <a class="hover:text-blue-600" href="index.html">Home</a>
+                    <a class="hover:text-blue-600" href="jobs.html">Jobs</a>
+                    <a class="hover:text-blue-600" href="postJobs.html">Post Job</a>
+                    <a class="hover:text-blue-600" href="about.html">About Us</a>
+                    <a class="hover:text-blue-600" href="contact.html">Contact Us</a>
+                    <a class="hover:text-blue-600" href="sign.html">Sign Up/login</a>
+                </nav>
             </div>
-            <nav class="hidden lg:flex space-x-10 text-white">
-                <a class="hover:text-blue-500" href="index.html">Home</a>
-                <a class="hover:text-blue-500" href="jobs.html">Jobs</a>
-                <a class="hover:text-blue-500" href="postJobs.html">Post Jobs</a>
-                <a class="hover:text-blue-500" href="savedJobs.html">Saved Jobs</a>
-                <a class="hover:text-blue-500" href="about.html">About Us</a>
-                <a class="hover:text-blue-500" href="contact.html">Contact Us</a>
-                <a class="hover:text-blue-500" href="sign.html">Sign in/up</a>
-            </nav>
-        </div>
-    </header>
+        </header>
     <main class="container mx-auto flex flex-col items-center justify-center">
        
         <section>
@@ -49,7 +50,7 @@
                            class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
                     
                            <label for="Personal-email" class="block text-sm font-medium text-gray-700">Email:</label>
-                           <input type="email" name="Personal-email" id="Personal-email" 
+                           <input type="email" name="Personal-email" id="Personal-email" placeholder="example@gmail.com"
                                   class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
                     <label for="file" class="block text-sm font-medium text-gray-700">Upload Your Resume</label>
                     <input type="file" name="resume" id="file">

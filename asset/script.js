@@ -1,9 +1,9 @@
 const joblist = [
-    { title: "Web Developer", company: "Techኢት", location: "Addis Ababa", description: "Job description:Company Profile Shemu Group is a conglomerate company composed of Shemu PLC, Asveza Ethiopia Retailing Share Company" },
-    { title: "Data Analyst", company: "DataCorp", location: "Addis Ababa", description: "Join our analytics team and make an impact." },
+    { title: "Web Developer", company: "Techኢት", location: "Addis Ababa", description: " We are seeking a talented and motivated Web Developer to join our dynamic team. As a Web Developer,<br> you will be responsible for designing, developing, testing, and implementing high-quality web applications.<br> You will work closely with our cross-functional teams to understand business requirements and translate <br> them into innovative and efficient solutions" },
+    { title: "Data Analyst", company: "DataCorp", location: "Addis Ababa", description: " We are looking for a skilled and detail-oriented Data Analyst to join our team. As a Data Analyst, you will play a <br>crucial role in gathering, analyzing, and interpreting complex data sets. You will work closely with various teams to identify <br>trends, patterns, and insights that can inform strategic business decisions.Join our analytics team and make an impact." },
     { title: "UX Designer", company: "DesignHub", location: "Adama", description: "Shape the user experience with innovative design." },
     {
-        title:"Software Engineer", company:"Tech Innovators Inc",location: "Addis Ababa", description:"Tech Innovators Inc. is seeking a talented Software Engineer to join our dynamic team.<br> In this role, you will be responsible for designing, developing, and maintaining cutting-edge <br> software solutions. Collaborate with cross-functional teams, analyze user requirements, and participate <br> in code and design reviews. If you're passionate about technology and love solving complex problems, we want to hear from you!"
+        title:"Software Engineer", company:"Tech Innovators Inc",location: "Addis Ababa", description:" Tech Innovators Inc. is seeking a talented Software Engineer to join our dynamic team.In this role,<br> you will be responsible for designing, developing, and maintaining cutting-edge  software solutions. Collaborate <br> with cross-functional teams, analyze user requirements, and participate in code and design reviews. <br>If you're passionate about technology and love solving complex problems, we want to hear from you!"
     }
     
 ];
@@ -33,5 +33,18 @@ function displayjoblist(list) {
         joblistContainer.appendChild(joblistElement);
     });
 }
+
+function toggleForm(activeForm) {
+    const signupForm = document.getElementById('signup');
+    const signInForm = document.getElementById('login');
+
+    if (activeForm === 'signup') {
+      signupForm.classList.remove('hidden');
+      signInForm.classList.add('hidden');
+    } else {
+      signupForm.classList.add('hidden');
+      signInForm.classList.remove('hidden');
+    }
+  }
 
 
