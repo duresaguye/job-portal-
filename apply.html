@@ -2,16 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="smart jobs" content="smart jobs home page">
+        <meta name="smart jobs" content="smart jobs Contact Information">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jobs</title>
+        <title>Apply</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
         <link rel="stylesheet" href="asset/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     </head>
-<body class="font-sans  ">
-    <header class="sticky top-0 z-50 bg-gray-900 shadow-md p-4">
+<body>    <header class="sticky top-0 z-50 bg-gray-900 shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
                 <img  src="asset/images/logo.png" alt="Logo of smart job"
@@ -34,27 +33,39 @@
         </div>
     </header>
     <main class="container mx-auto flex flex-col items-center justify-center">
+       
         <section>
-            <div class="container mx-auto bg-white shadow-lg rounded-lg p-8">
-                <div class="text-center pb-10 text-gray-700s">
-                    <label for="title" class="text-sm font-medium">Title:</label>
-                    <input type="search" id="title" name="title" placeholder="Search for your dream job..."
-                        class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 w-60"
-                        required autocomplete="given-name" />
-                    <button type="button" onclick="searchjob()"
-                        class="mt-2 bg-blue-500  py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                        Search
+            <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg">
+                <h1 class="text-2xl text-gray-800 pb-4 text-center">Apply Here</h1>
+        
+                <form action="#" method="post" class="space-y-4 mt-8">
+                    
+                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name:</label>
+                    <input type="text" name="first-name" id="first-name" required
+                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+
+                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name:</label>
+                    <input type="text" name="last-name" id="last-name" required
+                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+                    
+                           <label for="Personal-email" class="block text-sm font-medium text-gray-700">Email:</label>
+                           <input type="email" name="Personal-email" id="Personal-email" 
+                                  class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+                    <label for="file" class="block text-sm font-medium text-gray-700">Upload Your Resume</label>
+                    <input type="file" name="resume" id="file">
+                    <label for="comment" class="block text-sm font-medium text-gray-700">Cover Letter:</label>
+                    <textarea name="comment" id="comment"
+                              class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"></textarea>
+
+                    <button type="submit"
+                            class="bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                        Submit
                     </button>
-                </div>
-    
-                <div id="joblist">
-                    <!-- Your dynamically added job list goes here -->
-                </div>
+                </form>
             </div>
         </section>
     </main>
-    
-    
+
     <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-200 p-8 mt-8">
         
         <img width="120px" src="asset/images/logo.png" alt="Logo of Smart Jobs" class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16">
@@ -75,8 +86,8 @@
         <div class="copyright text-center py-6">
             &copy; 2023 Smart Jobs. All rights reserved.
         </div>
-    </footer> 
-    <script src="asset/script.js"></script>
+    </footer>  
+    <script src="script.js"></script>
 </body>
 
 </html>
