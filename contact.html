@@ -10,28 +10,44 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
         <link rel="stylesheet" href="asset/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </head>
     <body class="font-roboto">
-        <header class="sticky top-0 z-50 bg-white shadow-md p-4">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="flex items-center">
-                    <img  src="asset/images/smartjoblogo.png" alt="Logo of smart job"
-                    class="mr-4 rounded-full h-20 lg:h-16 w-16 lg:w-16">
-                    <div class="lg:hidden">
-                        <div class="menu-toggle text-gray-800" id="mobile-menu">
-                            <i class="fas fa-bars"></i>
-                        </div>
-                    </div>
+        <header>
+            <nav class="sticky top-0 p-5 bg-white shadow md:flex md:items-center md:justify-between" >
+                <div class="flex justify-between items-center ">
+                    <span class="text-2xl  cursor-pointer">
+                        <img  src="asset/images/smartjoblogo.png" alt="Logo of smart job"
+                    class=" rounded-full h-10 lg:h-16 w-10 lg:w-16">
+                    </span>
+                    
+                    <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                    </span>
                 </div>
-                <nav class="hidden lg:flex space-x-12 text-gray-800 h-8 ">
-                    <a class="hover:text-blue-600" href="index.html">Home</a>
-                    <a class="hover:text-blue-600" href="jobs.html">Jobs</a>
-                    <a class="hover:text-blue-600" href="postJobs.html">Post Job</a>
-                    <a class="hover:text-blue-600" href="about.html">About Us</a>
-                    <a class="hover:text-blue-600" href="contact.html">Contact Us</a>
-                    <a class="hover:text-blue-600" href="sign.html">Sign Up/login</a>
-                </nav>
-            </div>
+                <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <li class="mx-6 my-6 md:my-0">
+                        <a class="hover:text-blue-600 text-xl duration-500" href="index.html">Home</a>  
+                    </li>
+                    <li class="mx-6 my-6 md:my-0">
+                        <a class="hover:text-blue-600 text-x duration-500" href="jobs.html">Jobs</a>
+                    </li>
+                    <li class="mx-6 my-6 md:my-0">
+                        <a class="hover:text-blue-600 text-x duration-500" href="postJobs.html">Post Job</a>
+                    </li>
+                    <li class="mx-6 my-6 md:my-0">
+                        <a class="hover:text-blue-600 text-x duration-500" href="about.html">About Us</a>
+                    </li>
+                    <li class="mx-6 my-6 md:my-0">
+                        <a class="hover:text-blue-600 text-x duration-500" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="mx-6 my-6 md:my-0">
+                        <a class="hover:text-blue-600 text-x duration-500" href="sign.html">Sign Up/login</a>
+                    </li>
+                </ul>
+    
+            </nav>
         </header>
     <main class="container mx-auto flex flex-col items-center justify-center">
        
@@ -108,6 +124,7 @@
             &copy; 2023 Smart Jobs. All rights reserved.
         </div>
     </footer>  
+    <script src="asset/script.js"></script>
 </body>
 
 </html>
