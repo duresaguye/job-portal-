@@ -49,8 +49,19 @@ function toggleForm(activeForm) {
       signInForm.classList.remove('hidden');
     }
   }
-  function Menu(e){
-    let list = document.querySelector('ul');
-    e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-  }
+  const navbar = document.querySelector('navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        navbar.classList.add('navbar-scroll');
+    } else {
+        navbar.classList.remove('navbar-scroll');
+    }
+});
+document.getElementById('toggleSidebar').addEventListener('click', function () {
+    document.getElementById('sidebar').classList.toggle('open');
+});
+
+
+
 

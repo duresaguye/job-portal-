@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="smart jobs" content="smart jobs home page">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Apply Here</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
-        <link rel="stylesheet" href="asset/css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    </head>
-    <body class="font-roboto">
-        <header class="sticky top-0 z-50 bg-white shadow-md p-4">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="flex items-center">
-                    <img  src="asset/images/smartjoblogo.png" alt="Logo of smart job"
-                    class="mr-4 rounded-full h-20 lg:h-16 w-16 lg:w-16">
-                    <div class="lg:hidden">
-                        <div class="menu-toggle text-gray-800" id="mobile-menu">
-                            <i class="fas fa-bars"></i>
-                        </div>
-                    </div>
-                </div>
-                <nav class="hidden lg:flex space-x-12 text-gray-800 h-8 ">
-                    <a class="hover:text-blue-600" href="index.html">Home</a>
-                    <a class="hover:text-blue-600" href="jobs.html">Jobs</a>
-                    <a class="hover:text-blue-600" href="postJobs.html">Post Job</a>
-                    <a class="hover:text-blue-600" href="about.html">About Us</a>
-                    <a class="hover:text-blue-600" href="contact.html">Contact Us</a>
-                    <a class="hover:text-blue-600" href="sign.html">Sign Up/login</a>
-                </nav>
-            </div>
-        </header>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="smart jobs" content="smart jobs home page">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            z-index: 999;
+            overflow-y: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.open {
+            display: block;
+            transform: translateX(0);
+        }
+
+        #closeSidebar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="fixed top-0 left-0 bg-white w-full shadow">
+        <div class="container m-auto flex justify-between items-center text-gray-700">
+            <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16">
+
+            <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
+                <li class="hover:bg-gray-200 py-4 px-6">home</li>
+                <li class="hover:bg-gray-200 py-4 px-6">Jobs</li>
+                <li class="hover:bg-gray-200 py-4 px-6">postJobs</li>
+                <li class="hover:bg-gray-200 py-4 px-6">About Us</li>
+                <li class="hover:bg-gray-200 py-4 px-6">Contact us</li>
+                <li class="hover:bg-gray-200 py-4 px-6">Signup/login</li>
+            </ul>
+
+            <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
+                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                <div class="w-5 h-1 bg-gray-600 "></div>
+            </button>
+
+        </div>
+        <div id="sidebar" class="sidebar">
+            <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
+                <i class="fas fa-times text-gray-600"></i>
+            </button>
+            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                <li class="hover:bg-gray-200 py-4 px-6 w-full">home</li>
+                <li class="hover:bg-gray-200 py-4 px-6 w-full">Jobs</li>
+                <li class="hover:bg-gray-200 py-4 px-6 w-full">postJobs</li>
+                <li class="hover:bg-gray-200 py-4 px-6 w-full">About Us</li>
+                <li class="hover:bg-gray-200 py-4 px-6 w-full">Contact us</li>
+                <li class="hover:bg-gray-200 py-4 px-6 w-full">Signup/login</li>
+            </ul>
+        </div>
+    </nav>
+
     <main class="container mx-auto flex flex-col items-center justify-center">
        
         <section>
@@ -88,7 +130,16 @@
             &copy; 2023 Smart Jobs. All rights reserved.
         </div>
     </footer>  
-    <script src="script.js"></script>
+
+    <script>
+        document.getElementById('toggleSidebar').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('open');
+        });
+
+        document.getElementById('closeSidebar').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.remove('open');
+        });
+    </script>
 </body>
 
 </html>
