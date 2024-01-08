@@ -1,0 +1,3 @@
+[submodule "job-searching-website"]
+    path = job-searching-website
+    url = https://github.com/duresaguye/job-searching-website.git
