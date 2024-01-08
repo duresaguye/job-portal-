@@ -35,7 +35,11 @@ function displayjoblist(list) {
     
         joblistContainer.appendChild(joblistElement);
     });
+
 }
+
+
+
 
 function toggleForm(activeForm) {
     const signupForm = document.getElementById('signup');
@@ -58,9 +62,7 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('navbar-scroll');
     }
 });
-document.getElementById('toggleSidebar').addEventListener('click', function () {
-    document.getElementById('sidebar').classList.toggle('open');
-});
+
 
 
 

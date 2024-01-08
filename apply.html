@@ -12,68 +12,45 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <style>
-        .sidebar {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
-            height: 100%;
-            background-color: #fff;
-            z-index: 999;
-            overflow-y: auto;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .sidebar.open {
-            display: block;
-            transform: translateX(0);
-        }
-
-        #closeSidebar {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
+    
 </head>
 
 <body class="bg-gray-100">
-    <nav class="fixed top-0 left-0 bg-white w-full shadow">
-        <div class="container m-auto flex justify-between items-center text-gray-700">
-            <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16">
-
-            <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
-                <li class="hover:bg-gray-200 py-4 px-6">home</li>
-                <li class="hover:bg-gray-200 py-4 px-6">Jobs</li>
-                <li class="hover:bg-gray-200 py-4 px-6">postJobs</li>
-                <li class="hover:bg-gray-200 py-4 px-6">About Us</li>
-                <li class="hover:bg-gray-200 py-4 px-6">Contact us</li>
-                <li class="hover:bg-gray-200 py-4 px-6">Signup/login</li>
-            </ul>
-
-            <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
-                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                <div class="w-5 h-1 bg-gray-600 "></div>
-            </button>
-
-        </div>
-        <div id="sidebar" class="sidebar">
-            <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
-                <i class="fas fa-times text-gray-600"></i>
-            </button>
-            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-                <li class="hover:bg-gray-200 py-4 px-6 w-full">home</li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full">Jobs</li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full">postJobs</li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full">About Us</li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full">Contact us</li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full">Signup/login</li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav class="fixed top-0 left-0 bg-white w-full shadow">
+            <div class="container m-auto flex justify-between items-center text-gray-700">
+                <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
+    
+                <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
+                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
+               
+                </ul>
+                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
+                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                    <div class="w-5 h-1 bg-gray-600 "></div>
+                </button>
+            </div>
+            <div id="sidebar" class="sidebar hidden">
+                <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
+                    <i class="fas fa-times text-gray-600"></i>
+                </button>
+                <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
+                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
+                </ul>  
+            </div>
+        </nav>
+    </header>
 
     <main class="container mx-auto flex flex-col items-center justify-center">
        
@@ -109,9 +86,9 @@
         </section>
     </main>
 
-    <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-200 p-8 mt-8">
+    <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-300">
         
-        <img width="120px" src="asset/images/logo.png" alt="Logo of Smart Jobs" class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16">
+        <img width="120px" src="asset/images/smartjoblogo.png" alt="Logo of Smart Jobs" class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16 p-2">
 
        
         <div class="contact-info text-center mb-4">
