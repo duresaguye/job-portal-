@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./jobsearching website project/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        danger: '#ff0000',
+      }
+
+    },
   },
   variants:{
     extend: {

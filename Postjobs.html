@@ -6,7 +6,7 @@
     <meta name="smart jobs" content="smart jobs home page">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postjobs</title>
+    <title>Post job</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <link rel="stylesheet" href="asset/css/style.css">
@@ -14,68 +14,67 @@
 
 </head>
 
-<body class="bg-gray-100">
-    <header>
-        <nav class="fixed top-0 left-0 bg-white w-full shadow uppercase">
-            <div class="container m-auto flex justify-between items-center text-gray-700">
+<body style="background-color: #E1F4F3;">
+    <header class="bg-gray-700">
+        <nav class="fixed top-0 left-0 bg-gray-700 w-full shadow  text-white">
+            <div class="container m-auto flex justify-between items-center">
                 <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
     
                 <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
-               
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
                 </ul>
-                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
-                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                    <div class="w-5 h-1 bg-gray-600 "></div>
+                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-500" aria-label="Toggle Sidebar">
+                    <span class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
                 </button>
-            </div>
-            <div id="sidebar" class="sidebar hidden">
-                <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
-                    <i class="fas fa-times text-gray-600"></i>
-                </button>
-                <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
-                </ul>  
             </div>
         </nav>
+        <div id="sidebar" class="sidebar hidden">
+            <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
+                <i class="fas fa-times text-gray-600"></i>
+            </button>
+            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
+            </ul>
+        </div>
     </header>
    
-    <main class="container mx-auto flex flex-col items-center justify-center pt-12">
-        <section >
-            <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg">
-                <h1 class="text-3xl text-gray-800 pb-4 text-center">Post job</h1>
-                <form action="#" id="postJobForm" method="POST" class="space-y-4 mt-8">
-                    <label for="company name" class="block text-sm font-medium text-gray-700">company name:</label>
-                    <input type="text" id="company name" name="company name" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" required autocomplete="given-name">
-                    <label for="Job Title"class="block text-sm font-medium text-gray-700">Job Title</label>
-                 <input type="text" id="Job Title" name="Job Title" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"required autocomplete="given-name">
-                    <label for="Job Description"class="block text-sm font-medium text-gray-700">Job Description</label>
-                    <textarea name="Job Description" id="Job Description" cols="3" rows="2" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"></textarea>
-                    <label for="Job type"class="block text-sm font-medium text-gray-700">Job type(optional)</label>
-                    <input type="text" id="Job type" name="Job type" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" autocomplete="given-name">
-                    <label for="Loction"class="block text-sm font-medium text-gray-700">Loction</label>
-                    <input type="text" id="Loction" name="Loction" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
-                    <label for="End Date"class="block text-sm font-medium text-gray-700">End Date</label>
+    <main class="container mx-auto flex flex-col items-center justify-center p-12 text-gray-900">
+        <section class="pt-10">
+            <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg" id="form">
+                <h1 class="text-3xl text-center">Post job</h1>
+                <form action="#" id="postJobForm" method="POST" class="space-y-3 mt-8 text-xl bg-blue-100 p-4">
+                    <label for="company name" class="block  font-medium ">Company name:</label>
+                    <input type="text" id="company name" name="company name" placeholder="Techኢት" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" required autocomplete="given-name">
+                    <label for="Job Title"class="block  font-medium ">Job Title</label>
+                 <input type="text" id="Job Title" name="Job Title" placeholder="software engineer" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"required autocomplete="given-name">
+                    <label for="Job Description"class="block  font-medium ">Job Description</label>
+                    <textarea name="Job Description" id="Job Description" placeholder="add your job Description her..." cols="3" rows="2" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"></textarea>
+                    <label for="Job type"class="block  font-medium ">Job type</label>
+                    <input type="text" id="Job type" name="Job type" placeholder="Remote" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" autocomplete="given-name">
+                    <label for="Loction"class="block  font-medium ">Loction</label>
+                    <input type="text" id="Loction" name="Loction" placeholder="Addis Ababa" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+                    <label for="End Date"class="block  font-medium ">End Date</label>
                     <input type="date" id="End Date" name="End Date" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
-                    <label for="email"class="block text-sm font-medium text-gray-700">Email</label>
+                    <label for="email"class="block  font-medium ">Email</label>
                     <input type="email" id="email" name="email" placeholder="example@gmail.com" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full" required autocomplete="off">
-                    <button type="submit"  onclick="showAlert()"
-                    class="bg-blue-500 text-gray-700  py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                    <button   onclick="showAlert()"
+                    class="bg-blue-500   py-2 px-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
                     <a href="jobs.html">Submit</a>
             </button>
-            <button type="submit"
-            class="bg-blue-500 text-gray-700  py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+            <button 
+            class="bg-blue-500   py-2 px-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
         <a href="jobs.html">See posted job</a>
         
 
@@ -86,10 +85,10 @@
         </section>
     </main>
 
-    <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-300">
+    <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-700 text-white">
         
-        <img width="120px" src="asset/images/smartjoblogo.png" alt="Logo of Smart Jobs" class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16 p-2">
-
+        <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
+    
        
         <div class="contact-info text-center mb-4">
             <ul class="list-none">
@@ -99,9 +98,9 @@
             </ul>
         </div>
         <div class="socials flex">
-            <a href="https://t.me/Icon_dura" class="mr-4"><img width="40px" src="asset/images/telegram.png" alt="telegram icon"></a>
-            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="mr-4"><img width="40px" src="asset/images/linkedin.png" alt="linkedin icon"></a>
-            <a href="https://github.com/duresaguye"><img width="40px" src="asset/images/github.png" alt="github icon"></a>
+            <a href="https://t.me/Icon_dura" class="mr-4 w-10 h-10"><img  src="asset/images/telegram.png" alt="telegram icon"></a>
+            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="mr-4 w-10 h-10"><img  src="asset/images/linkedin.png" alt="linkedin icon"></a>
+            <a href="https://github.com/duresaguye"><img class="w-10 h-10" src="asset/images/github.png" alt="github icon"></a>
         </div>
         <div class="copyright text-center py-6">
             &copy; 2023 Smart Jobs. All rights reserved.

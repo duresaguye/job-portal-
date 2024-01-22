@@ -65,7 +65,7 @@ function displayjoblist(list) {
                 <p class="mb-1"><strong>Location:</strong> ${job.location}</p>
                 <p class="mb-2"><strong>Description:</strong>${job.description}</p>
                 <a href="apply.html"
-                    class="inline-block bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 mb-2">
+                    class="inline-block bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 mb-2">
                     Apply Now
                 </a>
             </div>
@@ -105,11 +105,162 @@ function toggleForm(activeForm) {
       signupForm.classList.add('hidden');
       signInForm.classList.remove('hidden');
     }
+}
+function validateSignUp() {
+    const fname = document.getElementById('fname');
+    const lname = document.getElementById('Lname');
+    const email = document.getElementById('email');
+    const pass = document.getElementById('password');
+    const confirmPass = document.getElementById('confirm-password');
+
+    if (allLetter(fname, 1) && allLetter(lname, 2) && ValidateEmail(email, 1) && ValidPass(pass, 1) && matchPasswords(pass, confirmPass)) {
+        alert('Successfully signed up');
+        return true;
+    } else {
+        return false;
+    }
+}
+function validateLogin() {
+    const email = document.getElementById('Email');
+    const pass = document.getElementById('Password');
+
+    if (ValidateEmail(email, 2) && ValidPass(pass, 2)) {
+        alert('Successfully logged in');
+        return true;
+    } else {
+        return false;
+    }
+}
+function validateApplication() {
+    const fname = document.getElementById('firstName');
+    const lname = document.getElementById('lastName');
+    const email = document.getElementById('applyEmail');
+    const file = document.getElementById('file');
+    const coverletter = document.getElementById('coverletter');
+
+    if (allLetter(fname.value, 2) && allLetter(lname.value, 2) && validateCoverLetter(coverletter) && validateEmail(email.value) && validatefile(file.value)) {
+        alert('Successfully applied');
+        return true;
+
+    }
+    else{
+        return false;
+    }
+}
+function validatepostjob(){
+    const companyName = document.getElementById('compName');
+    const jobTitle =  document.getElementById('jobtitle');
+    const jobDescribtion = document.getElementById('jobdescrebtion');
+    const jobType = document.getElementById('jobtype');
+    const location = document.getElementById('loction');
+    const email = document.getElementById('jobPostEmail');
+}
+
+
+
+function allLetter(name, num) {
+    var letter = /^[a-zA-Z]+$/;
+
+    if (name.value.match(letter)) {
+        document.getElementById('fname-error').innerHTML = '';
+        document.getElementById('lname-error').innerHTML = '';
+        return true;
+    } else {
+        if (num === 1) {
+            document.getElementById('fname-error').innerHTML = 'Name must have alphabet characters only';
+        } else {
+            document.getElementById('lname-error').innerHTML = 'Name must have alphabet characters only';
+        }
+        return false;
+    }
+}
+
+function ValidateEmail(email, num) {
+    var emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2})?$/;
+
+    if (!emailRegExp.test(email.value)) {
+        if (num === 1) {
+            document.getElementById('email-error').innerHTML = 'Invalid Email Address! Please check and try again';
+        } else {
+            document.getElementById('email-error-l').innerHTML = 'Invalid Email Address! Please check and try again';
+        }
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function ValidPass(password, num) {
+    if (password.value.length >= 8) {
+        document.getElementById("password-error").innerHTML = "";
+        document.getElementById("password-error-l").innerHTML = "";
+        return true;
+    } else {
+        if (num === 1) {
+            document.getElementById('password-error').innerHTML = "Password should be at least 8 characters long";
+        } else {
+            document.getElementById('password-error-l').innerHTML = "Password should be at least 8 characters long";
+        }
+        return false;
+    }
+}
+
+function matchPasswords(pass, confirmPass) {
+    if (pass.value !== confirmPass.value) {
+        document.getElementById("confirm-password-error").innerHTML = "Passwords do not match";
+        return false;
+    } else {
+        document.getElementById("confirm-password-error").innerHTML = "";
+        return true;
+    }
+}
+
+function toggleForm(formType) {
+    if (formType === "login") {
+        document.getElementById("signup").style.display = "none";
+        document.getElementById("login").style.display = "block";
+    } else {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("signup").style.display = "block";
+    }
+}
+
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById("password");
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var showPasswordButton = document.getElementById("show-password-button");
+  
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      showPasswordButton.textContent = "Hide Password";
+    } else {
+      passwordInput.type = "password";
+      showPasswordButton.textContent = "Show Password";
+    }
   }
- 
 
+  function validateForm() {
+    
 
+    //  Check if the email is in a valid format
+    var emailInput = document.getElementById('feedbackEmail');
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2})?$/;
 
+    if (!emailRegex.test(emailInput.value)) {
+        document.getElementById("feedbackEmailError").innerHTML = "Invalid email address";
+      
+        return false; // Prevent form submission
+    }
 
+    // Additional validation logic can be added based on your requirements
 
-
+    return true; // Allow form submission
+}
+  

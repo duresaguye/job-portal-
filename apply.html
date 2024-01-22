@@ -15,81 +15,71 @@
     
 </head>
 
-<body class="bg-gray-100">
-    <header>
-        <nav class="fixed top-0 left-0 bg-white w-full shadow uppercase">
-            <div class="container m-auto flex justify-between items-center text-gray-700">
+<body class="bg-gray-500">
+    <header class="bg-gray-700">
+        <nav class="fixed top-0 left-0 bg-gray-700 w-full shadow  text-white">
+            <div class="container m-auto flex justify-between items-center">
                 <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
     
                 <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
-               
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
                 </ul>
-                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
-                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                    <div class="w-5 h-1 bg-gray-600 "></div>
+                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-500" aria-label="Toggle Sidebar">
+                    <span class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
                 </button>
-            </div>
-            <div id="sidebar" class="sidebar hidden">
-                <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
-                    <i class="fas fa-times text-gray-600"></i>
-                </button>
-                <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
-                </ul>  
             </div>
         </nav>
+        <div id="sidebar" class="sidebar hidden">
+            <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
+                <i class="fas fa-times text-white"></i>
+            </button>
+            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
+            </ul>
+        </div>
     </header>
 
-    <main class="container mx-auto flex flex-col items-center justify-center pt-14">
+    <main class="container mx-auto flex flex-col items-center justify-center p-14">
        
-        <section>
-            <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg">
-                <h1 class="text-2xl text-gray-800 pb-4 text-center">Apply Here</h1>
-        
-                <form action="#" method="post" class="space-y-4 mt-8">
-                    
-                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name:</label>
-                    <input type="text" name="first-name" id="first-name" required
-                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
+        <section class="pt-5">
+            
 
-                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name:</label>
-                    <input type="text" name="last-name" id="last-name" required
-                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
-                    
-                           <label for="Personal-email" class="block text-sm font-medium text-gray-700">Email:</label>
-                           <input type="email" name="Personal-email" id="Personal-email" placeholder="example@gmail.com"
-                                  class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full">
-                    <label for="file" class="block text-sm font-medium text-gray-700">Upload Your Resume</label>
-                    <input type="file" name="resume" id="file">
-                    <label for="comment" class="block text-sm font-medium text-gray-700">Cover Letter:</label>
-                    <textarea name="comment" id="comment"
-                              class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"></textarea>
-
-                    <button type="submit"
-                            class="bg-blue-500 text-gray-700 py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                        Submit
-                    </button>
-                </form>
-            </div>
+            <div class="flex flex-col items-center justify-center h-screen dark">
+                <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+                  <h2 class="text-2xl font-bold text-gray-200 mb-4">Job Application Form</h2>
+              
+                  <form class="flex flex-col">
+                    <input placeholder="Full Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" required>
+                    <input placeholder="Email" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="email">
+                    <input placeholder="Phone Number" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text">
+                    <input placeholder="LinkedIn Profile URL" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text">
+                    <textarea placeholder="Cover Letter" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" name="cover_letter"></textarea>
+                    <input placeholder="Resume" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="file">
+              
+                    <button class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" >Apply</button>
+                  </form>
+                </div>
+              </div>
+              
         </section>
     </main>
 
-    <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-300">
+    <footer class="flex flex-col items-center justify-center bg-gray-700 text-white">
         
-        <img width="120px" src="asset/images/smartjoblogo.png" alt="Logo of Smart Jobs" class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16 p-2">
-
+        <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
+    
        
         <div class="contact-info text-center mb-4">
             <ul class="list-none">
@@ -99,9 +89,9 @@
             </ul>
         </div>
         <div class="socials flex">
-            <a href="https://t.me/Icon_dura" class="mr-4"><img width="40px" src="asset/images/telegram.png" alt="telegram icon"></a>
-            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="mr-4"><img width="40px" src="asset/images/linkedin.png" alt="linkedin icon"></a>
-            <a href="https://github.com/duresaguye"><img width="40px" src="asset/images/github.png" alt="github icon"></a>
+            <a href="https://t.me/Icon_dura" class="mr-4 w-10 h-10"><img  src="asset/images/telegram.png" alt="telegram icon"></a>
+            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="mr-4 w-10 h-10"><img  src="asset/images/linkedin.png" alt="linkedin icon"></a>
+            <a href="https://github.com/duresaguye"><img class="w-10 h-10" src="asset/images/github.png" alt="github icon"></a>
         </div>
         <div class="copyright text-center py-6">
             &copy; 2023 Smart Jobs. All rights reserved.

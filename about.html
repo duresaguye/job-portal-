@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="smart jobs" content="smart jobs home page">
+<meta name="smart jobs" content="smart jobs home page">
+  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
@@ -15,65 +16,63 @@
   
 </head>
 
-<body class="bg-white">
-    <header>
-        <nav class="fixed top-0 left-0 bg-white w-full shadow uppercase">
-            <div class="container m-auto flex justify-between items-center text-gray-700">
+<body  class="body">
+    <main class="p-12">
+        <section class="p-12 text-white mx-auto max-w-2xl flex flex-col items-center justify-center bg-gray-800 shadow mt-8">
+            <div class="pb-4">
+                <h1 class="text-2xl text-center pb-4 uppercase">About Us</h1>
+                <video width="600" height="500" controls>
+                    <source src="asset/vidoe/X8UIU5Y1PBO4FIPS.mp4" type="video/mp4">
+                </video>
+            </div>
+            <figure>
+                <img src="asset/images/popleInTheOffice.jpg" alt="people working in the office">
+            </figure>
+            <p class="pt-12  text-xl">We are building the largest and best career site in the world to help you find your Dream Job!</p>
+        </section>
+    </main>
+    
+    
+    </section>
+    <header class="bg-gray-700">
+        <nav class="fixed top-0 left-0 bg-gray-700 w-full shadow  text-white">
+            <div class="container m-auto flex justify-between items-center">
                 <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
     
                 <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 "><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
-               
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
                 </ul>
-                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
-                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                    <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                    <div class="w-5 h-1 bg-gray-600 "></div>x
+                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-500" aria-label="Toggle Sidebar">
+                    <span class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
                 </button>
-            </div>
-            <div id="sidebar" class="sidebar hidden">
-                <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
-                    <i class="fas fa-times text-gray-600"></i>
-                </button>
-                <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="jobs.html" class="text-gray-700  hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="Postjobs.html" class="text-gray-700  hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="about.html" class="text-gray-700  hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="contact.html" class="text-gray-700  hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="sign.html" class="text-gray-700  hover:text-blue-600">Signup/Login</a></li>
-                </ul>  
             </div>
         </nav>
+        <div id="sidebar" class="sidebar hidden">
+            <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
+                <i class="fas fa-times text-gray-600"></i>
+            </button>
+            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
+            </ul>
+        </div>
     </header>
-   
-    <main class="container mx-auto p-8">
-        <section class="container mx-auto flex flex-col items-center justify-center  bg-white w-full shadow mt-8">
-            <div>
-                <h1 class="text-2xl text-gray-800 text-center pb-4 uppercase ">About Us</h1>             
-                <p class=" text-gray-700 pb-6">
-                        We are smart jobs, we believe in connecting people with <br> meaningful employment opportunities,
-                        fostering <br>career growth, and contributing to the success of <br>businesses through skilled and motivated talent.
-                </p>
-                <video width="380" height="200" controls>
-                        <source src="asset/vidoe/X8UIU5Y1PBO4FIPS.mp4" type="video/mp4">
-                </video>
-            </div>
-            
-            
-            
-        </section>
-    </main>
 
-    <footer class="container mx-auto flex flex-col items-center justify-center bg-gray-300">
+    <footer class="container mx-auto flex flex-col items-center justify-center text-white bg-gray-700">
         
-        <img width="120px" src="asset/images/smartjoblogo.png" alt="Logo of Smart Jobs" class="mr-4 rounded-full h-16 lg:h-16 w-16 lg:w-16 p-2">
-
+        <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
+    
        
         <div class="contact-info text-center mb-4">
             <ul class="list-none">
@@ -83,14 +82,17 @@
             </ul>
         </div>
         <div class="socials flex">
-            <a href="https://t.me/Icon_dura" class="mr-4"><img width="40px" src="asset/images/telegram.png" alt="telegram icon"></a>
-            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="mr-4"><img width="40px" src="asset/images/linkedin.png" alt="linkedin icon"></a>
-            <a href="https://github.com/duresaguye"><img width="40px" src="asset/images/github.png" alt="github icon"></a>
+            <a href="https://t.me/Icon_dura" class="mr-4 w-10 h-10"><img  src="asset/images/telegram.png" alt="telegram icon"></a>
+            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="mr-4 w-10 h-10"><img  src="asset/images/linkedin.png" alt="linkedin icon"></a>
+            <a href="https://github.com/duresaguye"><img class="w-10 h-10" src="asset/images/github.png" alt="github icon"></a>
         </div>
         <div class="copyright text-center py-6">
             &copy; 2023 Smart Jobs. All rights reserved.
+            <br>
+            <a href="https://www.linkedin.com/in/duresa-guye-5aba5625a/" class="hover:text-blue-500" >developed by dura</a>
+            
         </div>
-    </footer>  
+    </footer> 
     <script src="asset/script.js" defer></script>  
 </body>
 
