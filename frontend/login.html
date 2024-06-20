@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="smart jobs" content="smart jobs home page">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<body style="background-color: #E1F4F3;">
+
+    <main class="container mx-auto flex flex-col items-center justify-center p-5 ">
+        
+        <section >
+            <div class="container mx-auto p-5 bg-white  shadow-lg rounded-lg">
+                <h1 class="text-3xl">Well Come to smart Jobs</h1>
+
+            <div class="space-y-1 bg-blue-100 p-8 rounded-lg">
+                <form action="login.php" method="post">
+                    <h1 class="text-3xl text-center">Log in</h1>
+                    <label for="Email" class="block   ">Email:</label>
+                    <p style="color: red;" id="email-error-l"></p>
+                    <input type="email" id="Email" name="email" placeholder="example@.com"
+                        class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"
+                        required autocomplete="email">
+                    <label for="Password" class="block   ">password:</label>
+                    <p style="color: red;" id="password-error-l"></p>
+                    <input type="password" name="Password" id="Password" placeholder="Enter Your password"
+                        class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300 w-full"
+                        required autocomplete="new-password">
+                    <button
+                        class="bg-blue-500  py-1 px-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                        Log in
+                    </button>
+                    <p class=""> don't have an account? </p>
+            
+            
+                </form>
+                <a href="sign.html">
+                    <button
+                        class="bg-blue-500 py-1 px-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                        Sign up Here
+                    </button>
+                </a>
+            </div>
+            </div>
+               
+            
+
+
+        </section>
+
+    </main>
+
+
+    <script src="asset/script.js" defer></script>
+</body>
+
+</html>

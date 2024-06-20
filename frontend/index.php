@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+session_regenerate_id(true);
+
+if (!isset($_SESSION['email'])) {
+header('Location: login.php');
+exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,19 +35,27 @@
             </div>
         </section>
     <header class="bg-gray-700">
-        <nav class="fixed top-0 left-0 bg-gray-700 w-full shadow  text-white">
+        <nav class="fixed top-0 left-0 bg-gray-700 w-full shadow text-white">
             <div class="container m-auto flex justify-between items-center">
                 <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
     
                 <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="index.html" class="hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="index.php" class="hover:text-blue-600">Home</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="jobs.php" class="hover:text-blue-600">Jobs</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="Postjobs.php" class="hover:text-blue-600">Post Job</a>
+                    </li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="about.html" class="hover:text-blue-600">About Us</a>
+                    </li>
+                    
                 </ul>
-                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-500" aria-label="Toggle Sidebar">
+                <!-- Log out link -->
+                <a href="logout.php"
+                    class="hidden md:block bg-red-500 py-1 px-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300 mr-10">
+                    Log out
+                </a>
+                <button id="toggleSidebar"
+                    class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-500"
+                    aria-label="Toggle Sidebar">
                     <span class="menu-icon">
                         <i class="fas fa-bars"></i>
                     </span>
@@ -49,15 +67,24 @@
                 <i class="fas fa-times text-white"></i>
             </button>
             <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="index.html" class="hover:text-blue-600">Home</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="index.php" class="hover:text-blue-600">Home</a>
+                </li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="jobs.php" class="hover:text-blue-600">Jobs</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="Postjobs.php" class="hover:text-blue-600">Post
+                        Job</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="about.html" class="hover:text-blue-600">About Us</a>
+                </li>
+               
+                        
             </ul>
+            <!-- Log out link for mobile -->
+            <a href="logout.php"
+                class="block md:hidden bg-red-500 py-1 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300 mt-4">
+                Log out
+            </a>
         </div>
     </header>
+
     <main>
         <section class="text-center text-white  pt-8">
         <div id="Services">
@@ -65,37 +92,16 @@
             <div class="grid grid-cols-2">
                 <p class="font-bold text-3xl">Post job</p>
                 <p class="font-bold text-3xl">Search job</p>
-                <a href="Postjobs.html">
+                <a href="Postjobs.php">
                     <img src="asset/images/post.png" alt="post job" class="mx-auto mb-4 w-12">
                 </a>
-                <a href="jobs.html">
+                <a href="jobs.php">
                     <img src="asset/images/search_.png" alt="search jobs" class="mx-auto mb-4 w-12">
                 </a>
             </div>
         </div>
         <div class="my-12 border-t-8 border-gray-700"></div>
-        <div class=" pb-12"> 
-            <div class=" pb-12 shadow-lg rounded-lg p-6 inline-block bg-white text-gray-700" >
-                <form action="/subscribe" method="post">
-                    <h3 class="text-2xl mb-4">Subscribe to get new job posts</h3>
-                    <label for="subscribeEmail"> Your Email:</label>
-                    <p style="color: red;" id="SubscribeEmailError"></p>
-                    <input type="email" name="email" id="subscribeEmail" placeholder="Enter email address..." required 
-                           class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300">
-                    <br><br>
-                    <label>
-                        <input type="checkbox" name="consent" required>
-                        I consent to receive job post notifications.
-                    </label>
-                    <br><br>
-                    <button  class="py-2 px-2 bg-blue-400 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                        Subscribe Now
-                    </button>
-                </form>
-                
-                
-            </div>
-        </div>
+       
     </section>
 </main>
 

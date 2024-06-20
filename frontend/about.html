@@ -35,19 +35,27 @@
     
     </section>
     <header class="bg-gray-700">
-        <nav class="fixed top-0 left-0 bg-gray-700 w-full shadow  text-white">
+        <nav class="fixed top-0 left-0 bg-gray-700 w-full shadow text-white">
             <div class="container m-auto flex justify-between items-center">
                 <img src="asset/images/smartjoblogo.png" alt="logo" class="rounded-full h-10 lg:h-16 w-10 lg:w-16 p-1">
     
                 <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="index.html" class="hover:text-blue-600">Home</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
-                    <li class="hover:bg-gray-500 py-4 px-6"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="index.php" class="hover:text-blue-600">Home</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="jobs.php" class="hover:text-blue-600">Jobs</a></li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="Postjobs.php" class="hover:text-blue-600">Post Job</a>
+                    </li>
+                    <li class="hover:bg-gray-500 py-4 px-6"><a href="about.html" class="hover:text-blue-600">About Us</a>
+                    </li>
+                    
                 </ul>
-                <button id="toggleSidebar" class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-500" aria-label="Toggle Sidebar">
+                <!-- Log out link -->
+                <a href="logout.php"
+                    class="hidden md:block bg-red-500 py-1 px-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
+                    Log out
+                </a>
+                <button id="toggleSidebar"
+                    class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-500"
+                    aria-label="Toggle Sidebar">
                     <span class="menu-icon">
                         <i class="fas fa-bars"></i>
                     </span>
@@ -56,16 +64,24 @@
         </nav>
         <div id="sidebar" class="sidebar hidden">
             <button id="closeSidebar" class="absolute top-0 right-0 m-4 focus:outline-none">
-                <i class="fas fa-times text-gray-600"></i>
+                <i class="fas fa-times text-white"></i>
             </button>
             <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="index.html" class="hover:text-blue-600">Home</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="Postjobs.html" class="hover:text-blue-600">Post Job</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="about.html" class="hover:text-blue-600">About Us</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="contact.html" class="hover:text-blue-600">Contact Us</a></li>
-                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="sign.html" class="hover:text-blue-600">Signup/Login</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="index.php" class="hover:text-blue-600">Home</a>
+                </li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="jobs.php" class="hover:text-blue-600">Jobs</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="Postjobs.php" class="hover:text-blue-600">Post
+                        Job</a></li>
+                <li class="hover:bg-gray-500 py-4 px-6 w-full"><a href="about.html" class="hover:text-blue-600">About Us</a>
+                </li>
+               
+    
             </ul>
+            <!-- Log out link for mobile -->
+            <a href="logout.php"
+                class="block md:hidden bg-red-500 py-1 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300 mt-4">
+                Log out
+            </a>
         </div>
     </header>
 
