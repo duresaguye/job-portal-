@@ -13,11 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($email) || empty($password)) {
         echo "All fields are required.";
     } else {
-        $sql = "SELECT * FROM users WHERE email = ?";
-        $stmt = $db->prepare($sql);
-        $stmt->bind_param('s', $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $result = $db->query($sql);
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
@@ -32,5 +30,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 } else {
-    header('Location: sign.html');
+    header('Location: login.html');
 }

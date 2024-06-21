@@ -1,8 +1,7 @@
 <?php
-include_once 'Database.php'; // Include your database connection file
-include_once 'User.php'; // Include the User class file
+include_once 'Database.php'; 
+include_once 'User.php';
 
-// Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Create a new instance of the User class
     $database = new Database();

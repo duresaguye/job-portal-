@@ -46,20 +46,7 @@ class User
         return false;
     }
 
-    public function login()
-    {
-        $query = "SELECT id, first_name, last_name, email, password FROM " . $this->table_name . " WHERE email = ?";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("s", $this->email);
-        $stmt->execute();
-        $stmt->store_result();
-        if ($stmt->num_rows == 1) {
-            $stmt->bind_result($this->id, $this->first_name, $this->last_name, $this->email, $this->password);
-            $stmt->fetch();
-            return password_verify($_POST['password'], $this->password);
-        }
-        return false;
-    }
+   
 
     public function postJob()
     {
@@ -119,22 +106,20 @@ class User
 
     public function applyJob()
     {
-        // Sanitize input data
-        $full_name = htmlspecialchars(strip_tags($this->full_name));
-        $email = htmlspecialchars(strip_tags($this->email));
-        $phone_number = htmlspecialchars(strip_tags($this->phone_number));
-        $linkedin_url = htmlspecialchars(strip_tags($this->linkedin_url));
-        $cover_letter = htmlspecialchars(strip_tags($this->cover_letter));
+        
+        $query = "INSERT INTO " . $this->applications_table . " (full_name, email, phone_number, linkedin_url, cover_letter) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($query);
 
-        // Prepare SQL query for inserting application details into the database
-        $query = "INSERT INTO " . $this->applications_table . " (full_name, email, phone_number, linkedin_url, cover_letter) VALUES ('$full_name', '$email', '$phone_number', '$linkedin_url', '$cover_letter')";
+        // Bind parameters
+        $stmt->bind_param("sssss", $this->full_name, $this->email, $this->phone_number, $this->linkedin_url, $this->cover_letter);
 
-        // Execute the statement and check if it was successful
-        if ($this->conn->query($query)) {
-            return true; // Application submitted successfully
+        
+        if ($stmt->execute()) {
+            return true; 
         }
-        return false; // Error submitting application
+        return false; 
     }
+
 
 
 }
