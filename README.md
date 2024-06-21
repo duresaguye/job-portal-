@@ -1,5 +1,6 @@
 Job Portal
-Overview
+
+
 
 This project is a job portal where users can browse and apply for job listings. It is built using HTML, Tailwind CSS, JavaScript, and PHP.
 Features
